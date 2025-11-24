@@ -1,7 +1,7 @@
 import { useState , useEffect} from "react";
 const Pokemon =(props) =>{
     
-    const {pokemon} = props;
+    const {pokemon,onNext,onPrevious} = props;
 
     let poke = pokemon.species.url;
 
@@ -37,12 +37,11 @@ const Pokemon =(props) =>{
     }else{
         evolution = "No evolution";
     }
-    // let pokemonId = pokemon.id;
-    
+
     return(
         <> 
         <div className="pokedex">
-            
+                
                 <div className="pokemon-display">
                     <img className="pokemon-img" src={pokemon.sprites.front_default} alt={pokemon.name} />
                 </div>
@@ -53,6 +52,12 @@ const Pokemon =(props) =>{
                        
                     </div>
                 </div>
+
+                <div className="round-buttons">
+                    <button className="round-button left" onClick={onPrevious}></button>
+                    <button className="round-button right" onClick={onNext}></button>
+                </div>
+
                 <div className="pokemon-info-panel">
                     <div className="pokemon-info">
                         <h2 className="pokemon-header"> {pokemon.name}</h2>
@@ -63,9 +68,6 @@ const Pokemon =(props) =>{
                         <br />
                         <p><strong>Weight:</strong> <br />{(pokemon.weight/10) + "kg"} </p>
                         <br />
-                        {/* {evolution !== "No evolution" && (
-                            <p><strong>Evolutions:</strong> {evolution} {secondEvolution}</p>
-                        )} */}
                     </div>
                 </div>
 

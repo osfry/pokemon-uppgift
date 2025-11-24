@@ -28,6 +28,23 @@ const PokemonApplication = () =>{
             // console.log(json.results);
         }
     }
+    
+    // next button funcitonality
+    const handleNext = () =>{
+        
+
+        if(selectedPokemon != null && selectedPokemon && selectedPokemon.id < 151){
+            getPokemon(selectedPokemon.id + 1);
+        }
+    }
+
+    // previous button functionality
+    const handlePrevious = () =>{
+        
+        if(selectedPokemon != null && selectedPokemon && selectedPokemon.id > 1){
+            getPokemon(selectedPokemon.id - 1);
+        }
+    }
 
     return(
         <div>
@@ -40,15 +57,27 @@ const PokemonApplication = () =>{
             ))
         }
         </select>
-
             <button onClick={()=> {
                 setShowPokemon(true);
                 getPokemon(selectPokemon);
 
             }}>Pick</button>
-            {showPokemon && selectedPokemon && (
-                <Pokemon pokemon={selectedPokemon} />
+
+            {!showPokemon ? (
+                <div className="pokedex-closed">
+                    <img src="./src/assets/pokedex-unopen.png" alt="Closed Pokedex" />
+                </div>
+            ) : (
+                selectedPokemon && (
+                    <Pokemon pokemon={selectedPokemon} onNext={handleNext} onPrevious={handlePrevious}/>
+                )
             )}
+
+            {/* {showPokemon && selectedPokemon && (
+                <Pokemon pokemon={selectedPokemon} onNext={handleNext} onPrevious={handlePrevious}/>
+            )} */}
+
+            
         </div>
     );
 }

@@ -18,3 +18,12 @@ function App() {
 }
 
 export default App
+
+//IDEAS
+
+//open close pokedex
+
+//zoom in/out on image
+
+
+
