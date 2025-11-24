@@ -13,7 +13,6 @@ const PokemonApplication = () =>{
     const [showPokemon, setShowPokemon] = useState (false);
 
     async function getPokemon(pokemonName){
-        
         const url = pokemonName
         ? `https://pokeapi.co/api/v2/pokemon/${pokemonName}`
         : `https://pokeapi.co/api/v2/pokemon?limit=151`;
@@ -28,20 +27,6 @@ const PokemonApplication = () =>{
             setPokemons(json.results)
             // console.log(json.results);
         }
-    //    let response;
-       
-    //     if(pokemonName != ""){
-    //         response = await fetch (`https://pokeapi.co/api/v2/pokemon/${pokemonName}`)
-    //     }else{
-    //         response = await fetch (`https://pokeapi.co/api/v2/pokemon?limit=151`);
-    //     }
-       
-    //     const json = await response.json();
-        
-    //     pokemonName != "" ? 
-    //     setSelectedPokemon(json.results): setPokemons(json.results)
-        
-    //     console.log (json);
     }
 
     return(
@@ -60,7 +45,7 @@ const PokemonApplication = () =>{
                 setShowPokemon(true);
                 getPokemon(selectPokemon);
 
-            }}>Choose</button>
+            }}>Pick</button>
             {showPokemon && selectedPokemon && (
                 <Pokemon pokemon={selectedPokemon} />
             )}

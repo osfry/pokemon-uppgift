@@ -7,7 +7,7 @@ function App() {
 
   return (
     <>
-
+      <h1>Choose your pokemon</h1>
       {!showPokemonApp ?
       <button onClick={()=> setShowPokemonApp(true)}>
       Start Pokemon App
