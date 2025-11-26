@@ -1,0 +1,25 @@
+.pokemonInfoPanel {
+  position: absolute;
+  top: 270px;
+  right: 7%;
+  /* left: ; */
+  width: 170px;
+  height: 150px;
+  padding: 15px;
+  overflow-y: auto;
+  /* background-color: blue; */
+}
+
+.pokemonInfo {
+  text-align: center;
+  color: #fff;
+  font-size: 12px;
+  font-family: "Press Start 2P", cursive;
+}
+
+.pokemonHeader {
+  font-family: "Press Start 2P", cursive;
+  color: #fff;
+  font-size: 14px;
+  text-transform: uppercase;
+}

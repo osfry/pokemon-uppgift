@@ -1,0 +1,37 @@
+.pokemonEvolutionHeader {
+  position: absolute;
+  top: 460px;
+  right: 7%;
+  width: 170px;
+  padding: 10px;
+  font-family: "Press Start 2P", cursive;
+  color: #fff;
+  font-size: 10px;
+  text-align: center;
+}
+
+.pokemonEvolutionInfoOne {
+  text-align: center;
+  color: #fff;
+  font-size: 8px;
+  font-family: "Press Start 2P", cursive;
+  position: absolute;
+  top: 487px;
+  left: 60%;
+  width: 80px;
+  padding: 10px;
+  /* background-color: blue; */
+}
+.pokemonEvolutionInfoTwo {
+  text-align: center;
+  color: #fff;
+  font-size: 8px;
+  font-family: "Press Start 2P", cursive;
+  position: absolute;
+  top: 487px;
+  /* right: %; */
+  left: 77%;
+  width: 80px;
+  padding: 10px;
+  /* background-color: pink; */
+}

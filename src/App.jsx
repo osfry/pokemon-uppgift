@@ -15,20 +15,9 @@ function App() {
     <BrowserRouter>
       
       <Routes>
-        {/* <Route path="/" element={
-          <>
-          {!showPokemonApp ?
-          <button onClick={()=> setShowPokemonApp(true)}>
-          Start Pokemon App
-          </button> : <PokemonApplication />
-          }   
-          </>
-        } />
-        <Route path="/pokemon" element={<Pokemon />} /> */}
-
         <Route path="/" element={<Home />} />
         <Route path="/pokedex" element={<PokemonApplication />} /> 
-        <Route path="/pokemon/:id" element={<Pokemon />} />
+        <Route path="/pokemon/:name" element={<Pokemon />} />
         <Route path="*" element={<h2>Page Not Found</h2>} />
       </Routes>
     

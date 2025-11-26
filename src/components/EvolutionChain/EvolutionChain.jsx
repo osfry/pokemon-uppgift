@@ -1,19 +1,20 @@
+import styles from './EvolutionChain.module.css';
 const EvolutionChain = ({evolution,secondEvolution}) => {
     return(
         <>
-            <div className="pokemon-evolution-header">
+            <div className={styles.pokemonEvolutionHeader}>
                 <div className="pokemon-info">
                     {<strong>Evolutions:</strong>}
                 </div>
             </div>
                    
-            <div className="pokemon-evolution-info-one">
+            <div className={styles.pokemonEvolutionInfoOne}>
                 {evolution !== "No evolution" && (
                     <p>{evolution} </p>
                 )}
             </div>
 
-            <div className="pokemon-evolution-info-two">
+            <div className={styles.pokemonEvolutionInfoTwo}>
                 {evolution !== "No evolution" && (
                     <p> {secondEvolution}</p>
                 )}

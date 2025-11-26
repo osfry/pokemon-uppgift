@@ -1,0 +1,11 @@
+.pokemonContent {
+  transition: opacity 0.1s ease-in-out;
+}
+
+.fadeIn {
+  opacity: 1;
+}
+
+.fadeOut {
+  opacity: 0;
+}

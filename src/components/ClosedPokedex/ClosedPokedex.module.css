@@ -1,0 +1,14 @@
+.pokedexClosed {
+  width: 340px;
+  height: 600px;
+  margin: 20px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+}
+.pokedexClosed img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}

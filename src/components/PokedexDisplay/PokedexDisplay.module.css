@@ -1,0 +1,64 @@
+.pokedex {
+  background-image: url("../../src/assets/pokedex-open.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 500px;
+  height: 600px;
+  margin: 20px auto;
+  position: relative;
+  padding: 50px;
+}
+
+.pokemonDisplay {
+  position: absolute;
+  top: 255px;
+  left: 60px;
+  width: 190px;
+  text-align: center;
+}
+
+.pokemonImg {
+  width: 150px;
+  height: 150px;
+  image-rendering: pixelated;
+}
+
+.pokemonId {
+  top: 350px;
+  right: 35%;
+  margin: 20px auto;
+  position: relative;
+  padding: 50px;
+}
+
+.roundButtons {
+  position: absolute;
+  top: 490px;
+  left: 30%;
+  display: flex;
+  gap: 5px;
+}
+
+.roundButton {
+  width: 25px;
+  height: 40px;
+  border-radius: 20%;
+  border: 2px solid #000;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.left::before {
+  content: "←";
+}
+
+.right::before {
+  content: "→";
+}

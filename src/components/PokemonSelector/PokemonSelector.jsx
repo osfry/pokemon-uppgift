@@ -1,9 +1,16 @@
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
+const PokemonSelector = ({ pokemons, onSelect, selectedPokemon }) => {
+    const navigate = useNavigate();
 
-const PokemonSelector = ({ pokemons, onSelect, onPick }) => {
+    const handlePick = () => {
+        if (selectedPokemon) {
+            navigate(`/pokemon/${selectedPokemon}`);
+        }
+    };
+
     return (
-        <div className="pokemon-selector">
+        <div>
             <select onChange={(e) => onSelect(e.target.value)}>
                 <option value="">Select a Pokemon</option>
                 {pokemons.map(pokemon => (
@@ -12,10 +19,7 @@ const PokemonSelector = ({ pokemons, onSelect, onPick }) => {
                     </option>
                 ))}
             </select>
-            {/* <Link to="/pokedex"> */}
-
-            <button onClick={onPick}>Pick</button>
-            {/* </Link> */}
+            <button onClick={handlePick}>Pick</button>
         </div>
     );
 };

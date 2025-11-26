@@ -1,6 +1,7 @@
+import styles from './ClosedPokedex.module.css';
 const ClosedPokedex = () => {
     return (
-        <div className="pokedex-closed">
+        <div className={styles.pokedexClosed}>
             <img src="./src/assets/pokedex-unopen.png" alt="Closed Pokedex" />
         </div>
     );
